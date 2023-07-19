@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+* {
+  font-family: 'Inria Sans';
+  font-weight: 400;
+}
+
+body {
+  background-color: #212529;
+  overflow: auto;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.column {
+  margin: 10px;
+  height: 100%;
+}
+
+.button-group {
+  display: grid;
+  gap: 10px;
+}
+
+#Sh2 {
+  color: #FFF;
+  text-align: center;
+}
+
+button {
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1B6EC2;
+  color: #FFF;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#Mh2 {
+  text-align: center;
+  background-color: #1B6EC2;
+  padding: 5px;
+  margin-top: 13px;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.form-name {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form-name input {
+  width: 300px;
+  border: none;
+}
+
+.form-name input:focus {
+  outline: 0;
+}
+
+.estrutura-form {
+  display: none;
+  background-color: #FFF;
+  border-radius: 0 0 5px 5px;
+  font-size: 12px;
+  padding: 10px;
+  overflow: auto;
+  height: 540px;
+}
+
+.template-name {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+
+}
+
+.template-name input {
+  width: 330px;
+  border: none;
+}
+
+.template-name input:focus {
+  outline: 0;
+}
+
+.flex-template {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dowload-div {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.download-button {
+  background: none;
+  border: 1px solid #FFF;
+}
+
+.copy-button {
+  padding: 0px 20px;
+  font-size: 16px;
+}
+
+.tab {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.ativo {
+  background-color: #FFF;
+  color: #1B6EC2;
+  font-weight: 600;
+}
+
+.tab button {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+
+.guid-box {
+  width: 90%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 5px;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.guid-box button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-guid-box {
+  display: grid;
+  gap: 5px;
+}
+
+.input-guid {
+  border: 1px solid #1B6EC2;
+  border-right: none;
+  border-radius: 3px 0px 0px 3px;
+  height: 20px;
+  padding: 1.5px;
+}
+
+.input-id {
+  border: 1px solid #1B6EC2;
+  border-radius: 3px;
+  height: 20px;
+  padding: 1.5px;
+}
+
+.input-guid:focus {
+  outline: 0;
+}
+
+.input-id:focus {
+  outline: 0;
+}
+
+.input-copy {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.input-copy button {
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  color: #1B6EC2;
+  border: 1px solid #1B6EC2;
+  border-radius: 0px 3px 3px 0px;
+  border-left: none;
+}
+
+.feather-copy {
+  height: 15px;
+}
+
+.feather-download {
+  height: 20px;
+}
+
+#check-html {
+  margin: 20px 0px 10px 10px;
+}
+
+
+
+
+/* ------- CSS DAS MODAIS DOS BOTÕES ------- */
+
+.modal {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.modal-body {
+  background-color: #212529;
+  margin: 5% 32% 0% 32%;
+  padding: 10px;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.modal-title {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 1.5em;
+}
+
+.modal-display {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+
+.modal-display-property {
+  display: grid;
+  gap: 8px;
+  width: 10%;
+}
+
+.modal-display textarea,
+.modal-display textarea:focus {
+  border: none;
+  outline: 0;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.modal-body input {
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.modal-body input:focus {
+  outline: 0;
+}
+
+.close-modal {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#cancel-modal {
+  background-color: #918787de;
+}
+
+#cancel-modal, #save-modal {
+  width: 100%;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+form input {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1B6EC2;
+}
+
+.modal-flex {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-options input[type="text"],
+.modal-options input[type="number"] {
+  width: 10%;
+}
+
+.modal-options input[type="radio"]:hover {
+  cursor: pointer;
+}
