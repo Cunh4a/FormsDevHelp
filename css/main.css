@@ -52,8 +52,55 @@ header {
     width: 50px;
 }
 .main {
-    margin: 20px 0 0 0;
+    margin: 120px 0 0 0;
+    color: #fff;
+
 }
-.vector-bg {
-    width: 500px;
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #212529;
+
+    width: 50%;
+    height: 45rem;
+    float: left;
+
+    border-radius: 20px 0 0 20px;
+}
+.left h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.left p {
+    width: 550px;
+}
+.left a {
+    color: #62b1ff;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+.left a:hover {
+    color: #2282e2;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 45rem;
+    float: right;
+    padding: 0 30px;
+
+    background-color: #2a2f33;
+
+    border-radius: 0 20px 20px 0;
+}
+.img-left {
+    width: 600px;
+    margin-top: 100px;
 }
