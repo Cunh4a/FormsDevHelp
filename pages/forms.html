@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/logo-form.png" type="icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <title>FormsDevHelp - Lugarh</title>
+</head>
+
+<body>
+
+  <section class="grid-section">
+    <div class="column">
+      <h2 id="Sh2">CRIAR +</h2>
+      <div class="button-group">
+        <button onclick="abrirModal('modal-1')">FormStep</button>
+        <button onclick="abrirModal('modal-2')">OptionStep</button>
+        <button onclick="abrirModal('modal-3')">SimpleStructionField - SIF</button>
+        <button onclick="abrirModal('modal-4')">TextField</button>
+        <button onclick="abrirModal('modal-5')">NumberField</button>
+        <button onclick="abrirModal('modal-6')">TermField</button>
+        <button onclick="abrirModal('modal-7')">MaskedField</button>
+        <button onclick="abrirModal('modal-8')">DateField</button>
+        <button onclick="abrirModal('modal-9')">CheckBoxField</button>
+        <button onclick="abrirModal('modal-10')">RadioListField</button>
+        <button onclick="abrirModal('modal-11')">SelectField</button>
+        <button onclick="abrirModal('modal-12')">DependentsList</button>
+        <button onclick="abrirModal('modal-13')">ButtonField</button>
+        <button onclick="abrirModal('modal-14')">ShareWithDependentList</button>
+      </div>
+    </div>
+
+    <div class="column">
+      <h2 id="Mh2">ARQUIVO EM JSON</h2>
+      <div class="form-name">
+        <label for="text">Nome do Formulário [Acronym]:</label>
+        <input type="text">
+      </div>
+
+      <div class="tab">
+        <button id="tabPadrao" class="tab-button" onclick="abrirTab(event, 'docx')">DOCX</button>
+        <button class="tab-button" onclick="esconderDiv(), abrirTab(event, 'html')">HTML</button>
+      </div>
+
+      <div id="docx" class="estrutura-form">
+        {<br>&emsp;"$type": "LugaRh.Domain.Models.Flows.BenefitsForms.FormConfiguration,
+        LugaRh.Domain.Models",<br>&emsp;"Id": "GERAR GUID E COLAR AQUI",<br>&emsp;"IdCompany": "COLAR ID DA
+        COMPANY DE TESTE",<br>&emsp;"Description": "",<br>&emsp;&emsp;"Steps": {<br>&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[LugaRh.Domain.Models.Flows.Step, LugaRh.Domain.Models]],
+        System.Private.CoreLib",<br>&emsp;&emsp;&emsp;"$values": [ ]<br>&emsp;},<br>&emsp;"Acronym": "NOME DO
+        FORMULÁRIO",<br>&emsp;"Blocked": false,<br>&emsp;"PayloadField": {<br>&emsp;&emsp;"$type":
+        System.Collections.Generic.List`1[[LugaRh.Domain.Models.Shares.Export.ShareExportMappingField,
+        LugaRh.Domain.Models]], System.Private.CoreLib",<br>&emsp;&emsp;"$values": [
+        ]<br>&emsp;},<br>&emsp;"PayloadFieldGroups": {<br>&emsp;&emsp;"$type":
+        "LugaRh.Domain.Models.Shares.Export.ShareExportMappingGroup, LugaRh.Domain.Models",<br>&emsp;&emsp;"Name":
+        "dependent",<br>&emsp;&emsp;"KnotName": "DadosPessoais",<br>&emsp;&emsp;"Fields":
+        {<br>&emsp;&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[LugaRh.Domain.Models.Shares.Export.ShareExportMappingField,
+        LugaRh.Domain.Models]], System.Private.CoreLib",<br>&emsp;&emsp;&emsp;"$values": [
+        ]<br>&emsp;&emsp;}<br>&emsp;},<br>&emsp;"FormType": 1,<br>&emsp;"TemplateId": "Colar GUID do template
+        aqui",<br>&emsp;"Global": true,<br>&emsp;"WorkspaceList": { <br>&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib]], System.Private.CoreLib",<br>
+        &emsp;&emsp;"$values": [ ]<br>&emsp;},<br>"EnableNewFingerprint": true<br>}
+      </div>
+
+      <div id="html" class="estrutura-form">
+        {<br>&emsp;"$type": "LugaRh.Domain.Models.Flows.BenefitsForms.FormConfiguration,
+        LugaRh.Domain.Models",<br>&emsp;"Id": "GERAR GUID E COLAR AQUI",<br>&emsp;"IdCompany": "COLAR ID DA
+        COMPANY DE TESTE",<br>&emsp;"Description": "",<br>&emsp;&emsp;"Steps": {<br>&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[LugaRh.Domain.Models.Flows.Step, LugaRh.Domain.Models]],
+        System.Private.CoreLib",<br>&emsp;&emsp;&emsp;"$values": [ ]<br>&emsp;},<br>&emsp;"Acronym": "NOME DO
+        FORMULÁRIO",<br>&emsp;"Blocked": false,<br>&emsp;"Htmls": { <br> &emsp;&emsp;"$type":
+        "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String,
+        System.Private.CoreLib]], System.Private.CoreLib", <br> &emsp;&emsp;"default": "COLAR HTML AQUI", <br>
+        &emsp;&emsp;"html01": "", <br> &emsp;&emsp;"html02": "" <br> &emsp;}, <br> &emsp;"HtmlAdditional": { <br>
+        &emsp;&emsp;"$type": "System.Collections.Generic.Dictionary`2[[System.String,
+        System.Private.CoreLib],[System.String,
+        System.Private.CoreLib]], System.Private.CoreLib", <br>
+        &emsp;&emsp;"dependentList": " " <br>
+        &emsp;}<br>&emsp;"PayloadField": {<br>&emsp;&emsp;"$type":
+        System.Collections.Generic.List`1[[LugaRh.Domain.Models.Shares.Export.ShareExportMappingField,
+        LugaRh.Domain.Models]], System.Private.CoreLib",<br>&emsp;&emsp;"$values": [
+        ]<br>&emsp;},<br>&emsp;"PayloadFieldGroups": {<br>&emsp;&emsp;"$type":
+        "LugaRh.Domain.Models.Shares.Export.ShareExportMappingGroup, LugaRh.Domain.Models",<br>&emsp;&emsp;"Name":
+        "dependent",<br>&emsp;&emsp;"KnotName": "DadosPessoais",<br>&emsp;&emsp;"Fields":
+        {<br>&emsp;&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[LugaRh.Domain.Models.Shares.Export.ShareExportMappingField,
+        LugaRh.Domain.Models]], System.Private.CoreLib",<br>&emsp;&emsp;&emsp;"$values": [
+        ]<br>&emsp;&emsp;}<br>&emsp;},<br>&emsp;"FormType": 1,<br>&emsp;"TemplateId": "Colar GUID do template
+        aqui",<br>&emsp;"Global": true,<br>&emsp;"WorkspaceList": { <br>&emsp;&emsp;"$type":
+        "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib]], System.Private.CoreLib",<br>
+        &emsp;&emsp;"$values": [ ]<br>&emsp;},<br>"EnableNewFingerprint": true<br>}
+      </div>
+
+      <div class="flex-template">
+        <div class="template-name">
+          <label for="text">ID TEMPLATE: </label>
+          <input type="text">
+        </div>
+        <div class="dowload-div">
+          <div>
+            <button class="download-button"><i data-feather="download"></i></button>
+          </div>
+          <button class="copy-button">COPIAR</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="column">
+      <h2 id="Sh2">GUID's</h2>
+      <div class="guid-box">
+        <button class="new-guid" style="font-size: 16px;">Gerar +</button>
+        <div class="input-guid-box">
+          <div class="input-copy">
+            <input id="texto" class="input-guid" type="text">
+            <button onclick="copiarTexto()"> <i data-feather="copy"></i> </button>
+          </div>
+          <label for="text">ID do Formulário:</label>
+          <input class="input-id" type="text">
+          <label for="text">ID da Company</label>
+          <input class="input-id" type="text">
+        </div>
+        <div id="check-html">
+          <input type="checkbox">
+          <label for="checkbox">Formulário em HTML</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA DAS MODAIS -->
+
+  <!-- FORMSTEP -->
+
+  <div id="modal-1" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> FormStep </div>
+        <div class="modal-display">
+          <label for="text">Título da Página: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display">
+          <label for="text">GUID: </label>
+          <input type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-1')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-1')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTIONSTEP -->
+  <div id="modal-2" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> OptionStep </div>
+        <div class="modal-flex">
+          <div>Digite o título da página: </div>
+          <input type="text">
+        </div>
+        <div>Digite as opções: </div>
+        <form method="POST" target="_blank">
+          <div id="formulario">
+            <label for="text">Opção: </label>
+            <input type="text">
+          </div>
+        </form>
+        <a href="#" data-id="1" id="adicionarCampo">+ adicionar campo</a>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-2')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-2')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIF -->
+  <div id="modal-3" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> SimpleStructionField - SIF </div>
+        <div class="modal-display">
+          <label for="text">Título da Description: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display">
+          <label for="textarea">Description: </label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-3')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-3')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT_FIELD -->
+  <div id="modal-4" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title">Text Field</div>
+        <div class="modal-options">
+          <div>Quantidade de caracteres:</div>
+          <input type="number">
+        </div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div class="modal-display">
+          <label for="text">Digite a label do campo: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+        <div class="close-modal">
+          <button id="cancel-modal" onclick="fecharModal('modal-4')">Cancelar</button>
+          <button id="save-modal" onclick="fecharModal('modal-4')">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NUMBER_FIELD -->
+  <div id="modal-5" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title">Number Field</div>
+        <div class="modal-options">
+          <div>Quantidade de caracteres:</div>
+          <input type="number">
+        </div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div class="modal-display">
+          <label for="text">Digite a label do campo: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+        <div class="close-modal">
+          <button id="cancel-modal" onclick="fecharModal('modal-5')">Cancelar</button>
+          <button id="save-modal" onclick="fecharModal('modal-5')">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERM_FIELD -->
+  <div id="modal-6" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> Term Field </div>
+        <div class="modal-display">
+          <label for="text">Título: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display">
+          <label for="textarea">Termo: </label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div><br>
+        <div class="modal-display">
+          <label for="text">Frase no checkbox: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-6')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-6')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASKED_FIELD -->
+  <div id="modal-7" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> Term Field </div>
+        <div class="modal-display">
+          <label for="text">Mask: </label>
+          <input type="text" placeholder="999.999.999-99" />
+        </div><br>
+        <div class="modal-display">
+          <label for="text">Label: </label>
+          <input type="text">
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-7')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-7')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DATE_FIELD -->
+  <div id="modal-8" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title">Number Field</div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div class="modal-display">
+          <label for="text">Label: </label>
+          <input type="text" placeholder="DD/MM/AAAA">
+        </div><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+        <div class="close-modal">
+          <button id="cancel-modal" onclick="fecharModal('modal-8')">Cancelar</button>
+          <button id="save-modal" onclick="fecharModal('modal-8')">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKBOX_FIELD -->
+  <div id="modal-9" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> CheckboxField </div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div>Digite as opções: </div>
+        <form method="POST" target="_blank">
+          <div id="checkfields">
+            <label for="text">Checkbox: </label>
+            <input type="text">
+          </div>
+        </form>
+        <a href="#" data-id="2" id="adicionarCheck">+ adicionar campo</a>
+        <br><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-9')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-9')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RADIOLIST-FIELD -->
+  <div id="modal-10" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> RadiolistField </div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div>Digite as opções: </div>
+        <form method="POST" target="_blank">
+          <div id="checkfields">
+            <label for="text">Radio: </label>
+            <input type="text">
+          </div>
+        </form>
+        <a href="#" data-id="2" id="adicionarCheck">+ adicionar campo</a>
+        <br><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-10')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-10')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECT_FIELD -->
+  <div id="modal-11" class="modal">
+    <div class="modal-body">
+      <div>
+        <div class="modal-title"> SelectField </div>
+        <div class="modal-options">
+          <div>Campo obrigatório?</div>
+          <input type="radio" name="obrigatorio" value="sim">Sim
+          <input type="radio" name="obrigatorio" value="nao">Não
+        </div>
+        <div>Digite as opções: </div>
+        <form method="POST" target="_blank">
+          <div id="checkfields">
+            <label for="text">Radio: </label>
+            <input type="text">
+          </div>
+        </form>
+        <a href="#" data-id="2" id="adicionarCheck">+ adicionar campo</a>
+        <br><br>
+        <div class="modal-display-property">
+          <label for="text">'Property' do campo:</label>
+          <input maxlength="15" type="text">
+        </div>
+      </div>
+      <div class="close-modal">
+        <button id="cancel-modal" onclick="fecharModal('modal-11')">Cancelar</button>
+        <button id="save-modal" onclick="fecharModal('modal-11')">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="../js/index.js"></script>
+
+</html>

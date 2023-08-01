@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inria Sans";
+    font-weight: 400;
+}
+body {
+    background-color: #32373c;
+}
+
+header {
+    background-color: #212529;
+    padding: 20px;
+    width: 100%;
+
+    top: 0;
+    position: fixed;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+}
+.menu ul li {
+    display: inline;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+
+    transition: all .2s ease-in-out;
+}
+.menu ul li a:hover {
+    color: #ffffff87;
+}
+
+.logo-header {
+    width: 50px;
+}
+.main {
+    margin: 20px 0 0 0;
+}
+.vector-bg {
+    width: 500px;
+}
