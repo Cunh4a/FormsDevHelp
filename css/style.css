@@ -3,11 +3,52 @@
 * {
   font-family: 'Inria Sans';
   font-weight: 400;
+  margin: 0;
 }
 
 body {
-  background-color: #212529;
+  background-color: #2d3237;
   overflow: auto;
+}
+header {
+  background-color: #212529;
+  padding: 20px;
+  width: 97.8%;
+
+  top: 0;
+  margin-bottom: 10px;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  display: inline;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+
+  padding: 10px 20px;
+
+  transition: all .2s ease-in-out;
+}
+.menu ul li a:hover {
+  color: #ffffff87;
+}
+
+.logo-header {
+  width: 50px;
 }
 
 .grid-section {
