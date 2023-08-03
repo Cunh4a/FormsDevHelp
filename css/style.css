@@ -8,12 +8,12 @@
 
 body {
   background-color: #2d3237;
-  overflow: auto;
+  overflow: hidden;
 }
 header {
   background-color: #212529;
   padding: 20px;
-  width: 97.8%;
+  width: 100%;
 
   top: 0;
   margin-bottom: 10px;
