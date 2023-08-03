@@ -68,7 +68,7 @@ header {
     height: 45rem;
     float: left;
 
-    border-radius: 20px 0 0 20px;
+    border-radius: 90px 0 0 20px;
 }
 .left h1 {
     margin-bottom: 15px;
@@ -98,7 +98,7 @@ header {
 
     background-color: #2a2f33;
 
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 90px 0;
 }
 .img-left {
     width: 600px;
