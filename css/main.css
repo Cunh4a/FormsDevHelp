@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+@import "transistion-stylr";
 
 * {
     padding: 0;
@@ -50,6 +51,7 @@ header {
 
 .logo-header {
     width: 50px;
+    animation: in-circle-swoop .2s ease-in-out;
 }
 .main {
     margin: 120px 0 0 0;
@@ -80,7 +82,6 @@ header {
 .left a {
     color: #62b1ff;
     text-decoration: none;
-    transition: all .2s ease-in-out;
 }
 .left a:hover {
     color: #2282e2;
