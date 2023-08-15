@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const contentId = link.getAttribute("data-content");
 
+            
             contentDivs.forEach((div) => div.classList.remove('active'));
-
             document.getElementById(contentId).classList.add('active');
         });
     });

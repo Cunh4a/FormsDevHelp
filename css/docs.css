@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aeff;
+    box-shadow: 3px 3px 15px#212529;
+    border-radius: 10px;
+}
+
 body {
     font-family: 'Inria Sans', sans-serif;
     background-color: #32373c;
@@ -65,8 +79,10 @@ body {
     flex: 1;
     padding: 20px;
     transition: margin-left 0.3s ease-in-out;
-    overflow: hidden;
+
+    overflow-y: scroll;
 }
+
 div[id^="content-"] {
     display: none;
 }
@@ -110,4 +126,9 @@ div[id^="content-"].active {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.modal-img {
+    width: 45rem;
+    object-fit: cover;
 }
